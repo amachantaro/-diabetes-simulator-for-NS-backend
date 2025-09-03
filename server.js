@@ -27,11 +27,7 @@ const getSystemInstruction = (patientType) => {
   return `あなたは糖尿病患者です。看護師の指導に答えてください。`; // デフォルト
 };
 
-const corsOptions = {
-  origin: 'https://diabetes-simulator-for-ns-frontend.vercel.app',
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
